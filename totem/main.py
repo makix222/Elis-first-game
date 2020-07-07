@@ -1,4 +1,5 @@
 import pygame as py
+import sys
 from pygame.locals import QUIT
 import totem.world.globals as world_values
 from totem.pieces.form import PieceManager
@@ -18,6 +19,7 @@ while not done:
         if event.type == QUIT:
             py.display.quit()
             py.quit()
+            sys.exit(0)
     current_screen = py.display.get_surface()
     current_screen.fill(world_values.background_color)
     piece = PieceManager()
