@@ -45,7 +45,7 @@ class StarPiece:
         self.shape_size_rect = py.Rect((pos_left, pos_top), self.size)
 
         self.shape_size_weight = .95
-        self.pointedness_weight = .2
+        self.pointedness_weight = .3
         self.inner_radius = int(min(self.size) * self.pointedness_weight / 2)
         self.outside_radius = int(min(self.size) * self.shape_size_weight / 2)
 
