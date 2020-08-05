@@ -2,7 +2,7 @@ import pygame as py
 import sys
 from pygame.locals import *
 import totem.world.globals as world_values
-from totem.pieces.form import PieceManager
+from totem.pieces.piece_manager import PieceManager
 from totem.keyboard.keyboard_manager import KeyManager
 
 py.init()
@@ -25,7 +25,8 @@ while not done:
             py.quit()
             sys.exit(0)
         if event.type == KEYDOWN:
-            keyboard_manager.process_new_keys(py.key.get_pressed())
+            keyboard_manager.process_new_key()
+    keyboard_manager.process_all_keys()
 
     current_screen = py.display.get_surface()
     current_screen.fill(world_values.background_color)

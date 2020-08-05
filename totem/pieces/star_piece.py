@@ -1,25 +1,5 @@
 import pygame as py
-from pygame.locals import *
 import math
-
-
-class PieceManager:
-    def __init__(self):
-        self.piece_list = []
-        self.piece_size = (101, 101)
-        self.border_thickness = 2
-        self.piece_color = (40, 100, 255)
-        self.border_color = (210, 210, 210)
-
-    def spawn_star(self, surface, middle_point, star_points):
-        piece_1 = StarPiece(surface,
-                            self.piece_size,
-                            middle_point,
-                            self.border_thickness,
-                            self.border_color,
-                            self.piece_color,
-                            star_points)
-        piece_1.draw()
 
 
 class StarPiece:
@@ -74,3 +54,5 @@ class StarPiece:
         py.draw.rect(self.surface, self.border_color, self.shape_size_rect, self.border_thickness)
         # Draw center circle
         py.draw.polygon(self.surface, self.piece_color, self.star_point_lists, 1)
+
+
